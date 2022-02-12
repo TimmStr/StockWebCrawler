@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-# für sleep
 import sys
 import time
 import mysql.connector

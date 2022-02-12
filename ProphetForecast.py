@@ -8,7 +8,6 @@ from prophet import Prophet
 
 warnings.filterwarnings("ignore")
 
-
 # calculate prophet for all regions - hard coded years 2006 - 2019, predict 2020
 def prophet_all(data):
     df_pr = data[['Date', 'Open']]
@@ -32,9 +31,7 @@ def prophet_all(data):
     # print forecast as table data
     print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
-# change header to 1 when you are using jupyter
 df = pd.read_csv('csv/BTC-USD.csv', header=0, delimiter=',')
-
 
 # call prophet for all regions
 prophet_all(df)
